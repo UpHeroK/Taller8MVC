@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Ciudad</title>
+    <!-- BOOSTRAP 4 -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    
+</head>
+<body>
+     <!-- NAVIGATION  -->
+     <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+        Lista Ciudades
+      </a>
+      
+    </nav>
+    <div class="container pt-4">
+    <div class="card card-body">
+    <h1>Listar Ciudad</h1><br>
+    <table  class="table table-striped table-hover table-bordered table-sm bg-white">
+        
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>DESCRIP</td>
+            </tr>
+        </thead>
+        <tbody>
+                {% for ciudad in Ciudad %}
+            <tr>
+                <td>{{ ciudad.idciudad }}</td>
+                <td>{{ ciudad.nombredciudad }}</td>
+                <td>{{ ciudad.descripcionciudad }}</td>
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+</body>
+</html>

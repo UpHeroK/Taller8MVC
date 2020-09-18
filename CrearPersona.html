@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crear persona</title>
+    <!-- BOOSTRAP 4 -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    
+</head>
+<body>
+    <!-- NAVIGATION  -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+        Crear Persona
+      </a>
+      
+    </nav>
+    <div class="container pt-4">
+    <div class="card card-body">
+    <form action=""method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit">Crear</button>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
